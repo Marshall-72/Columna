@@ -26,5 +26,5 @@ def graficar_probabilidad(tipo_funcion, columna_probabilidad, color):
 
 # Mostrar cada gráfico
 graficar_probabilidad("Sello", "% Sello", "#4B4B4B")
-graficar_probabilidad("Generadora", "% Gener", "#A0522D")
-graficar_probabilidad("Reservorio", "% Reserv", "#1f77b4")
+graficar_probabilidad("Generadora", "% Roca Madre", "#A0522D")
+graficar_probabilidad("Reservorio", "% Reservorio", "#1f77b4")
