@@ -8,7 +8,7 @@ df = pd.read_excel("CE_procesado.xlsx")
 
 # Título general
 st.title("Análisis Petrológico de Litologías")
-
+st.image("AYUDAAAA_page-0001.jpg", caption="Columna Estratigrafica", use_column_width=True)
 # ==== 1. Resumen de espesores ====
 st.header("Resumen de espesores acumulados por tipo de roca")
 espesores = df.groupby("FUNCION")["ESPESOR"].sum()
