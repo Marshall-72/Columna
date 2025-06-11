@@ -28,3 +28,18 @@ def graficar_probabilidad(tipo_funcion, columna_probabilidad, color):
 graficar_probabilidad("Sello", "% Sello", "#4B4B4B")
 graficar_probabilidad("Generadora", "% Roca Madre", "#A0522D")
 graficar_probabilidad("Reservorio", "% Reservorio", "#1f77b4")
+# Mostrar resumen de espesores por tipo de roca
+st.header("Resumen de espesores acumulados por tipo de roca")
+
+# Agrupar y sumar espesores
+espesores = df.groupby("FUNCION")["ESPESOR"].sum()
+
+# Filtrar los tipos clave
+espesor_sello = espesores.get("Sello", 0)
+espesor_generadora = espesores.get("Generadora", 0)
+espesor_reservorio = espesores.get("Reservorio", 0)
+
+# Mostrar resultados
+st.markdown(f"- **Roca Sello:** {espesor_sello} m")
+st.markdown(f"- **Roca Generadora:** {espesor_generadora} m")
+st.markdown(f"- **Roca Reservorio:** {espesor_reservorio} m")
