@@ -10,7 +10,7 @@ st.title("Probabilidad por tipo de roca")
 
 # Función para graficar
 def graficar_probabilidad(tipo_funcion, columna_probabilidad, color):
-    df_filtrado = df[df['FUNCIÓN'].str.lower() == tipo_funcion.lower()]
+    df_filtrado = df[df['FUNCION'].str.lower() == tipo_funcion.lower()]
     if df_filtrado.empty:
         st.warning(f"No se encontraron datos para '{tipo_funcion}'.")
         return
